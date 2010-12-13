@@ -1,0 +1,79 @@
+8
+
+dir
+232
+svn+ssh://sukria@www.sukria.net/srv/sukria.net/www.sukria.net/svn/VCS-Packager/lib/VCS/Packager
+svn+ssh://sukria@www.sukria.net/srv/sukria.net/www.sukria.net/svn
+
+
+
+2008-07-31T12:44:17.991067Z
+221
+benmur
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8d5944e8-d230-0410-81a6-917bd0b4f3ae
+
+VCS.pm
+file
+
+
+
+
+2008-11-17T15:42:56.000000Z
+d0e4f70f0d56771ec6af36dc08c67961
+2008-07-09T12:26:01.853299Z
+193
+benmur
+
+WorkingCopy.pm
+file
+
+
+
+
+2008-11-17T15:42:56.000000Z
+c10f07b9f65ea5a9be0df3a02963d2ea
+2008-07-09T12:26:01.853299Z
+193
+benmur
+
+RemoteFile.pm
+file
+
+
+
+
+2008-11-17T15:42:56.000000Z
+b2f50c0aecbe4860710e3131828a2576
+2008-07-31T12:44:17.991067Z
+221
+benmur
+
+Repository.pm
+file
+
+
+
+
+2008-11-17T15:42:56.000000Z
+f4abde3ae72418e8a1ce57102438077b
+2008-06-12T12:33:41.463206Z
+182
+benmur
+
+VCS
+dir
+

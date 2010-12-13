@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use VCS::Packager;
+VCS::Packager->rollback(@ARGV);

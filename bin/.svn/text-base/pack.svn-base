@@ -1,0 +1,34 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Carp 'confess';
+
+use VCS::Packager;
+use VCS::Packager::Repository;
+
+use File::Spec;
+
+# usage $0 <checkout_path> <lang>
+my ($working_copy_path, $lang) = @ARGV;
+confess "Missing argument checkout_path. Usage:\n$0 <checkout_path> <lang>"
+    unless defined $working_copy_path;
+
+$working_copy_path = File::Spec->rel2abs($working_copy_path);
+
+my $sniffed_type =
+    VCS::Packager::Repository->sniff_vcs_type($working_copy_path);
+confess "Could not determine VCS type of directory $working_copy_path"
+    unless defined $sniffed_type;
+
+my $repo = VCS::Packager::Repository->new( 
+    type => $sniffed_type, 
+    working_copy => $working_copy_path);
+
+my $pack = VCS::Packager->new( 
+   lang => $lang,
+   repository => $repo);
+
+print $pack->build_archive."\n";
+
+exit 0;

@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Carp 'confess';
+
+use VCS::Packager;
+
+confess "Usage:\n$0 <archive> [destination_directory] [ignore]*"
+    if @ARGV < 1;
+
+VCS::Packager->deploy(@ARGV);
